@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #f5f5f5;      
+    --card-bg: #ffffff;       
+    --text-color: #333333;
+    --primary-color: #2c3e50; 
+    --nav-color: #34495e;     
+    --padding: 15px;         
+}
+body {
+    margin: 0;                               
+    font-family: Tahoma, sans-serif;         
+    background: var(--bg-color);             
+    color: var(--text-color);
+    line-height: 1.6;                        
+}
+header {
+    background: var(--primary-color);
+    color: #ffffff;
+    text-align: center;                      
+    padding: var(--padding);
+}
+nav {
+    display: flex;                           
+    flex-direction: column;                  
+    gap: 10px;                               
+    margin-top: 15px;
+}
+nav a {
+    background: var(--nav-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;                          
+    border-radius: 5px;                      
+}
+.container {
+    width: 100%;                            
+    max-width: 1200px;                      
+    margin: 0 auto;                          
+    padding: 20px var(--padding);           
+    box-sizing: border-box;
+}
+.card {
+    background: var(--card-bg);              
+    padding: var(--padding);                 
+    margin-bottom: 15px;                    
+    border-radius: 8px;                      
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+}
+footer {
+    background: #dddddd;                     
+    text-align: center;                     
+    padding: 10px;                           
+    font-size: 14px;                         
+}
+img {
+    max-width: 100%;                        
+    height: auto;                           
+}
+@media (min-width: 768px) {                  
+    :root {
+        --padding: 30px;                    
+    }
+    header {
+        text-align: left;                   
+        display: flex;
+        justify-content: space-between;     
+        align-items: center;
+    }
+    nav {
+        flex-direction: row;                 
+        margin-top: 0;
+    }
+    .container {
+        display: grid;                      
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;                          
+    }
+    .card {
+        margin-bottom: 0;             
+    }
+}
+@media (min-width: 1024px) {                 
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
