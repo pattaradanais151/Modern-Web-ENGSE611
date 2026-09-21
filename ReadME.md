@@ -7,7 +7,7 @@
 ## Live Demo (ดูเว็บไซต์จริง)
 
 สามารถเข้าชมเว็บไซต์ผลงาน (Landing Page) ได้ที่นี่: 
-[**คลิกเพื่อเข้าสู่หน้าเว็บ Portfolio บน GitHub Pages**](https://<your-username>.github.io/<repository-name>/)
+[**คลิกเพื่อเข้าสู่หน้าเว็บ Portfolio บน GitHub Pages**](https://pattaradanais151.github.io/Modern-Web-ENGSE611/)
 
 *(หมายเหตุ: อย่าลืมเปลี่ยนลิงก์ด้านบนเป็นลิงก์ GitHub Pages ของคุณจริงๆ)*
 
