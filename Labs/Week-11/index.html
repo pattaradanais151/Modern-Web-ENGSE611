@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รวมชิ้นงานสัปดาห์นี้</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f7f6;
+            font-family: 'Kanit', sans-serif;
+            color: #333;
+        }
+        .menu-container {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border-top: 5px solid #0f2557;
+        }
+        h1 {
+            color: #0f2557;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .task-btn {
+            display: block;
+            background-color: #f0f4f8;
+            color: #0f2557;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: 1px solid #dce4ec;
+        }
+        .task-btn:hover {
+            background-color: #0f2557;
+            color: #ffffff;
+        }
+        .btn-back {
+            display: inline-block;
+            background-color: transparent;
+            color: #666;
+            text-decoration: underline;
+            font-size: 0.95rem;
+        }
+        .btn-back:hover {
+            color: #0f2557;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>ชิ้นงาน Week 11</h1>
+        <p>สัปดาห์นี้มีงานหลายชิ้น กรุณาเลือกชิ้นงานที่ต้องการดู</p>
+        <div class="task-list">
+            <!-- แก้ไขชื่อไฟล์ href ให้ตรงกับงานที่ทำ -->
+            <a href="grade-check.html" class="task-btn">1. โปรแกรมเช็คเกรด (if-else)</a>
+            <a href="grade-switch.html" class="task-btn">2. โปรแกรมเช็คเกรด (Switch)</a>
+            <a href="loop-practice.html" class="task-btn">3. แบบฝึกหัด Loop</a>
+        </div>
+        <a href="../../index.html" class="btn-back">กลับสู่หน้าหลัก (Home)</a>
+    </div>
+</body>
+</html>

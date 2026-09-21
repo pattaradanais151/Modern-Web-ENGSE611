@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const weekGrid = document.getElementById('week-grid');
     const currentActiveWeek = 11; 
     const totalWeeks = 17;
-    const githubBaseUrl = "https://github.com/pattaradanais151/Modern-Web-ENGSE611";
+    const githubBaseUrl = "https://github.com/pattaradanais151/Modern-Web-ENGSE611/tree/main";
     let cardsHtml = '';
     for (let i = 1; i <= totalWeeks; i++) {
         const weekNum = i.toString().padStart(2, '0');
