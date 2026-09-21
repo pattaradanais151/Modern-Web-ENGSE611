@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การทำงานกับ String ขั้นสูง</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #1a1a1a;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1300px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .code-panel {
+            flex: 1;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 30px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        .demo-panel {
+            flex: 1;
+            background-color: #f2f3ec;
+            padding: 40px;
+        }
+        .demo-panel h2 {
+            font-size: 24px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .demo-panel p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .output-box {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            min-height: 250px;
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .run-btn {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .run-btn:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="code-panel">
+<pre><code>&lt;pre id="output"&gt;ผลลัพธ์จะแสดงที่นี่...&lt;/pre&gt;
+&lt;button onclick="runStringDemo()"&gt;Run Code&lt;/button&gt;
+
+&lt;script&gt;
+function runStringDemo() {
+    const out = [];
+
+    let text = 'JavaScript เจ๋งมาก';
+    let firstName = 'สมชาย';
+
+    out.push(`สวัสดี ${firstName}!`);
+    console.log(`สวัสดี ${firstName}!`);
+    
+    out.push("ความยาว: " + text.length);
+    console.log("ความยาว:", text.length);
+    
+    out.push("ตัวใหญ่: " + text.toUpperCase());
+    console.log("ตัวใหญ่:", text.toUpperCase());
+    
+    out.push("ตัวเล็ก: " + text.toLowerCase());
+    console.log("ตัวเล็ก:", text.toLowerCase());
+    
+    out.push('มี "Java"? ' + text.includes('Java'));
+    console.log('มี "Java"?', text.includes('Java'));
+    
+    out.push('ตำแหน่ง "Script": ' + text.indexOf('Script'));
+    console.log('ตำแหน่ง "Script":', text.indexOf('Script'));
+    
+    out.push("ตัดคำ (0-4): " + text.slice(0, 4));
+    console.log("ตัดคำ (0-4):", text.slice(0, 4));
+    
+    out.push("แทนที่: " + text.replace('เจ๋ง', 'สุดยอด'));
+    console.log("แทนที่:", text.replace('เจ๋ง', 'สุดยอด'));
+
+    document.getElementById("output").textContent = out.join("\n");
+
+    console.clear();
+    out.forEach(line => console.log("> " + line));
+}
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="demo-panel">
+            <h2>การทำงานกับ String ขั้นสูง 🌟</h2>
+            <p>กดปุ่มเพื่อรันโค้ด และดูผลลัพธ์ทั้งบนหน้าเว็บและใน Console</p>
+            
+            <pre id="output" class="output-box">ผลลัพธ์จะแสดงที่นี่...</pre>
+            
+            <button class="run-btn" onclick="runStringDemo()">Run Code</button>
+        </div>
+    </div>
+
+    <script>
+        function runStringDemo() {
+            const out = [];
+            let text = 'JavaScript เจ๋งมาก';
+            let firstName = 'สมชาย';
+
+            out.push(`สวัสดี ${firstName}!`);
+            console.log(`สวัสดี ${firstName}!`);
+            
+            out.push("ความยาว: " + text.length);
+            console.log("ความยาว:", text.length);
+            
+            out.push("ตัวใหญ่: " + text.toUpperCase());
+            console.log("ตัวใหญ่:", text.toUpperCase());
+            
+            out.push("ตัวเล็ก: " + text.toLowerCase());
+            console.log("ตัวเล็ก:", text.toLowerCase());
+            
+            out.push('มี "Java"? ' + text.includes('Java'));
+            console.log('มี "Java"?', text.includes('Java'));
+            
+            out.push('ตำแหน่ง "Script": ' + text.indexOf('Script'));
+            console.log('ตำแหน่ง "Script":', text.indexOf('Script'));
+            
+            out.push("ตัดคำ (0-4): " + text.slice(0, 4));
+            console.log("ตัดคำ (0-4):", text.slice(0, 4));
+            
+            out.push("แทนที่: " + text.replace('เจ๋ง', 'สุดยอด'));
+            console.log("แทนที่:", text.replace('เจ๋ง', 'สุดยอด'));
+
+            document.getElementById("output").textContent = out.join("\n");
+
+            console.clear();
+            out.forEach(line => console.log("> " + line));
+        }
+    </script>
+</body>
+</html>

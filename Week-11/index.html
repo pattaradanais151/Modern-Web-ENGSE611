@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่าง การใช้ตัวแปร Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>ตัวอย่าง การใช้ตัวแปร Javascript</h1>
+    </header>
+    
+    <main class="container">
+        <!-- ฝั่งซ้าย: แสดงโค้ด -->
+        <section class="code-section">
+<pre><code>&lt;button onclick="runDemo()"&gt;Run Code&lt;/button&gt;
+&lt;script&gt;
+    function runDemo() {
+        // ล้าง Console ทุกครั้งที่รัน เพื่อไม่ให้สับสนกับผลเก่า
+        console.clear();
+        const output = [];
+
+        // ตัวอย่างตัวแปร
+        let studentName = 'สมชาย';
+        let age = 20;
+        let isStudent = true;
+        const universityName = 'มหาวิทยาลัยเทคโนโลยี';
+        
+        // แสดงค่าตัวแปรเริ่มต้น
+        output.push("ชื่อ: " + studentName);
+        console.log("ชื่อ:", studentName);
+        output.push("อายุ: " + age);
+        console.log("อายุ:", age);
+
+        // เปลี่ยนค่า let
+        age = 21;
+        output.push("อายุใหม่: " + age);
+        console.log("อายุใหม่:", age);
+
+        // เปลี่ยนค่า const (จะ error แต่ถูกจับใน catch)
+        try {
+            universityName = 'มหาวิทยาลัยใหม่'; // ทำให้เกิด TypeError
+        } catch (e) {
+            output.push("Error: " + e.message);
+            console.error(e.message); // แสดงใน Console เป็นสีแดง
+        }
+
+        // แสดงผลบนหน้าเว็บ
+        document.getElementById("outputBox").textContent = output.join("\n");
+    }
+&lt;/script&gt;</code></pre>
+        </section>
+        
+        <section class="demo-section">
+            <button onclick="runDemo()" class="btn-run">Run Code</button>
+            
+            <div class="output-container">
+                <pre id="outputBox"></pre>
+            </div>
+
+            <p class="note-text">
+                <span class="note-label">หมายเหตุ:</span> <b>let</b> เปลี่ยนค่าได้, <b>const</b> เป็นค่าคงที่ เปลี่ยนไม่ได้ ตัวอย่างนี้จงใจเปลี่ยนค่าของ const universityName เพื่อให้เห็นข้อความ Error
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
