@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Practice</title>
+</head>
+<body>
+    <button onclick="runCode()">Run Code</button>
+    <div id="output" style="background-color: #1e1e1e; color: #ffffff; padding: 15px; margin-top: 15px; border-radius: 5px; font-family: monospace; white-space: pre-line;"></div>
+
+    <script>
+        function runCode() {
+            let maxNumber = 20;
+            let displayResult = "";
+
+            for (let i = 0; i <= maxNumber; i++) {
+                if (i % 2 === 0) {
+                    displayResult += i + " (คู่)\n";
+                    console.log(i + " (คู่)");
+                } else {
+                    displayResult += i + " (คี่)\n";
+                    console.log(i + " (คี่)");
+                }
+            }
+
+            for (let i = 0; i <= maxNumber; i += 2) {
+                displayResult += "นับทีละ 2: " + i + "\n";
+                console.log("นับทีละ 2: " + i);
+            }
+
+            for (let i = 10; i >= 0; i--) {
+                displayResult += "ถอยหลัง: " + i + "\n";
+                console.log("ถอยหลัง: " + i);
+            }
+
+            document.getElementById("output").textContent = displayResult;
+        }
+    </script>
+</body>
+</html>
